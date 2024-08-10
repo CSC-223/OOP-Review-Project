@@ -51,7 +51,8 @@ private:
 
 };
 
-const double PI = 3.14159;
+template <class T>
+const double CircleType<T>::PI = 3.14159;
 
 template <class T>
 CircleType<T>::CircleType() : centerPoint(), circumPoint() {}
@@ -61,11 +62,7 @@ CircleType<T>::CircleType(T xCenter, T yCenter, T xCircum, T yCircum): centerPoi
 	                                                                   circumPoint(xCircum, yCircum) { }
 
 template <class T>
-CircleType<T>::CircleType(PointType<T> center, PointType<T> circum)
-{
-	centerPoint = center;
-	circumPoint = circum;
-}
+CircleType<T>::CircleType(PointType<T> center, PointType<T> circum) : centerPoint(center), circumPoint(circum) { }
 
 template <class T>
 void CircleType<T>::setCenterPoint(T x, T y)
