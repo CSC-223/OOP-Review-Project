@@ -1,26 +1,26 @@
 // CircleType Class.cpp : This file contains the code and a separate test program for the CircleType class.
 
 #include <iostream>
-#include "CircleType.h"
+#include "CylinderType.h"
 
 int main()
 {
-    cout << "Test CircleType with integers" << endl;
+    cout << "Test CylinderType with integers" << endl;
 
-    cout << "Default constructor (circle1): ";
-    CircleType<int> circle1;
+    cout << "Default constructor (cylinder1): ";
+    CylinderType<int> cylinder1;
     cout << "   Center Point: ";
-    circle1.printCenterPoint();
+    cylinder1.printCenterPoint();
     cout << "   Circumference Point: ";
-    circle1.printCircumPoint();
+    cylinder1.printCircumPoint();
     cout << endl << endl;
 
-    cout << "Constructor with coordinates (circle2): ";
-    CircleType<int> circle2(5, 3, -4, 0);
+    cout << "Constructor with coordinates (cylinder2): ";
+    CylinderType<int> cylinder2(5, 3, -4, 0, 8);
     cout << "   Center Point: ";
-    circle2.printCenterPoint();
+    cylinder2.printCenterPoint();
     cout << "   Circumference Point: ";
-    circle2.printCircumPoint();
+    cylinder2.printCircumPoint();
     cout << endl << endl;
 
     cout << "Constructor with points (circle3): ";
