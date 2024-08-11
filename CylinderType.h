@@ -4,6 +4,7 @@ template<class T>
 class CylinderType :
     public CircleType<T>
 {
+public:
     //Default constructor
     CylinderType();
     //Constructor with coordinates sent in
@@ -32,13 +33,13 @@ private:
 };
 
 template <class T>
-CylinderType<T>::CylinderType() : CircleType(), height(0) { }
+CylinderType<T>::CylinderType() : CircleType<T>(), height(0) { }
 
 template <class T>
-CylinderType<T>::CylinderType(T xCenter, T yCenter, T xBase, T yBase, T h) : CircleType(xCenter, yCenter, xBase, yBase), height(h) { }
+CylinderType<T>::CylinderType(T xCenter, T yCenter, T xBase, T yBase, T h) : CircleType<T>(xCenter, yCenter, xBase, yBase), height(h) { }
 
 template <class T>
-CylinderType<T>::CylinderType(PointType<T> center, PointType<T> base, T h) : CircleType(center, base), height(h) { }
+CylinderType<T>::CylinderType(PointType<T> center, PointType<T> base, T h) : CircleType<T>(center, base), height(h) { }
 
 template <class T>
 void CylinderType<T>::setHeight(T h)
